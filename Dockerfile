@@ -1,6 +1,6 @@
 # Stage 1: Build the application
-# Use the official Node.js 20 image as a parent image
-FROM node:20-slim AS builder
+# Use the official Node.js 22 image as a parent image
+FROM node:22-slim AS builder
 
 # Set the working directory in the container
 WORKDIR /app
@@ -21,8 +21,8 @@ RUN yarn build
 # At this point, the /app/dist directory contains the compiled JavaScript code
 
 # Stage 2: Setup the production environment
-# Use a slim Node.js 20 image for the final stage
-FROM node:20-slim AS runner
+# Use a slim Node.js 22 image for the final stage
+FROM node:22-slim AS runner
 
 # Set the working directory
 WORKDIR /app

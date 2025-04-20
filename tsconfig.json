@@ -1,25 +1,17 @@
 {
-  "extends": "@tsconfig/recommended",
   "compilerOptions": {
-    "target": "ES2021",
-    "lib": ["ES2021", "ES2022.Object", "DOM"],
-    "module": "NodeNext",
-    "moduleResolution": "nodenext",
-    "esModuleInterop": true,
-    "noImplicitReturns": true,
-    "declaration": true,
-    "noFallthroughCasesInSwitch": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "useDefineForClassFields": true,
-    "strictPropertyInitialization": false,
-    "allowJs": true,
+    "target": "ES2020", // Or a newer target like ES2022
+    "module": "NodeNext", // Use NodeNext for modern Node.js ESM support
+    "moduleResolution": "NodeNext",
+    "outDir": "./dist", // Specify output directory
+    "rootDir": "./src", // Specify root directory of source files
     "strict": true,
-    "strictFunctionTypes": false,
-    "outDir": "dist",
-    "types": ["jest", "node"],
-    "resolveJsonModule": true
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "declaration": true, // Generate .d.ts files
+    "sourceMap": true // Generate source maps
   },
-  "include": ["**/*.ts", "**/*.js"],
-  "exclude": ["node_modules", "dist"]
+  "include": ["src/**/*"], // Include all files in src
+  "exclude": ["node_modules", "dist"] // Exclude node_modules and dist
 }

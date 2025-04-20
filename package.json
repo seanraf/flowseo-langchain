@@ -16,7 +16,7 @@
   "author": "",
   "license": "ISC",
   "engines": {
-    "node": "22"
+    "node": ">=20"
   },
   "dependencies": {
     "@langchain/community": "^0.3.41",
